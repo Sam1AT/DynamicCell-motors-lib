@@ -1,3 +1,5 @@
+#include "Arduino.h"
+
 class AX_RX_XL
 {
 
@@ -5,7 +7,9 @@ class AX_RX_XL
     unsigned short crc;
    
     public:
-    AX_RX_XL(unsigned char id)
+    unsigned char _ID;
+
+    AX_RX_XL(unsigned char id);
     void led_XL(char r, char g, char b);
     void joint_XL(unsigned int position, unsigned int speed, unsigned int time);
     void wheel_XL(unsigned int speed, unsigned char cw_ccw);
