@@ -7,7 +7,6 @@ class AX_RX_XL
     unsigned short crc;
    
     public:
-    unsigned char _ID;
 
     AX_RX_XL(unsigned char id);
     void led_XL(char r, char g, char b);
@@ -34,6 +33,7 @@ class AX_RX_XL
     void goto_joint_mode();
     void goto_wheel_mode();
   private:
+  	unsigned char _ID;
     unsigned short update_crc_XL(unsigned short crc_accum, unsigned char *data_blk_ptr, unsigned short data_blk_size);
 };
 
