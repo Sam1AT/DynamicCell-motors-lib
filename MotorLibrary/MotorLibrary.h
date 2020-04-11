@@ -3,8 +3,7 @@
 class AX_RX_XL
 {
 
-    byte  packet[30];
-    unsigned short crc;
+    
    
     public:
 
@@ -33,6 +32,8 @@ class AX_RX_XL
     void goto_joint_mode();
     void goto_wheel_mode();
   private:
+    byte  packet[30];
+    unsigned short crc;
   	unsigned char _ID;
     unsigned short update_crc_XL(unsigned short crc_accum, unsigned char *data_blk_ptr, unsigned short data_blk_size);
 };
